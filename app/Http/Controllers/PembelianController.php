@@ -103,9 +103,4 @@ class PembelianController extends Controller
     {
         //
     }
-
-    public function print()
-    {
-        return view('transaksiPembelian.print');
-    }
 }
