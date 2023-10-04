@@ -13,7 +13,7 @@ class StorePenjualanRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,24 @@ class StorePenjualanRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'no_faktur' => 'required',
+            'tgl_faktur' => 'required',
+            'total_bayar' => 'required',
+            'pelanggan_id' => 'required',
+            'barang_id' => 'required',
+            'harga_jual' => 'required',
+            'jumlah' => 'required',
+            'subtotal' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'no_faktur.required' => 'Anda belum memasukkan NO FAKTUR!',
+            'tgl_faktur.required' => 'Anda belum memasukkan TANGGAL!',
+            'pelanggan_id.required' => 'Anda belum memasukkan PELANGGAN!',
+            'barang_id.required' => 'Anda belum memasukkan BARANG!'
         ];
     }
 }

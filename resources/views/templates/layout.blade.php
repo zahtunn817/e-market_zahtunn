@@ -50,11 +50,11 @@
                 <!-- Navbar Search -->
                 @auth
                     <a class="nav-link" href="{{ route('logout') }}">
-                        <i class="fas fa-search"></i>Logout
+                        <i class="fas fa-sign-out-alt"></i>Logout
                     </a>
                 @else
                     <a class="nav-link" href="{{ url('login') }}">
-                        <i class="fas fa-search"></i>Login
+                        <i class="fas fa-sign-in-alt"></i>Login
                     </a>
                 @endauth
         </nav>

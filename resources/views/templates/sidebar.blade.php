@@ -32,50 +32,18 @@
 
                         @auth
                             <li class="nav-item">
-                                <a href="{{ url('user') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-user-tie"></i>
+                                <a href="{{ url('transaksiPenjualan') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-credit-card"></i>
                                     <p>
-                                        User
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('pelanggan') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Pelanggan
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('pemasok') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Pemasok
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('pembelian') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Data Pembelian
+                                        Transaksi Penjualan
                                     </p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ url('transaksiPembelian') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
+                                    <i class="nav-icon fas fa-database"></i>
                                     <p>
                                         Transaksi Pembelian
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('akses') }}" class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Akses
                                     </p>
                                 </a>
                             </li>
@@ -96,10 +64,43 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{ url('pelanggan') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Pelanggan
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('pemasok') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-truck"></i>
+                                    <p>
+                                        Pemasok
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{ url('profile') }}" class="nav-link">
                                     <i class="nav-icon fas fa-user-alt"></i>
                                     <p>
                                         Profile
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{ url('user') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-user-tie"></i>
+                                    <p>
+                                        User
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('akses') }}" class="nav-link">
+                                    <i class="nav-icon fas fa-key"></i>
+                                    <p>
+                                        Akses
                                     </p>
                                 </a>
                             </li>

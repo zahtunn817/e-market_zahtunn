@@ -9,6 +9,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\PemasokController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\DetailPembelianController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +53,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/user', UserController::class);
     Route::resource('/akses', AksesController::class);
     Route::resource('/pemasok', PemasokController::class);
+    Route::resource('/transaksiPenjualan', PenjualanController::class);
     Route::resource('/transaksiPembelian', PembelianController::class);
     Route::resource('/pelanggan', PelangganController::class);
 
