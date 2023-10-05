@@ -28,7 +28,7 @@ class UserController extends Controller
                     return redirect()->intended('/barang');
                     break;
                 case '3':
-                    return redirect()->intended('/pembelian');
+                    return redirect()->intended('/transaksiPembelian');
                     break;
             }
         }
@@ -52,7 +52,7 @@ class UserController extends Controller
                     return redirect()->intended('/barang');
                     break;
                 case '3':
-                    return redirect()->intended('/pembelian');
+                    return redirect()->intended('/transaksiPembelian');
                     break;
             }
             return redirect()->intended('/');

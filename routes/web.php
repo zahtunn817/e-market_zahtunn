@@ -48,22 +48,23 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', [HomeController::class, 'profile']);
     Route::get('/print', [PembelianController::class, 'print']);
 
-    Route::resource('/produk', ProdukController::class);
-    Route::resource('/barang',  BarangController::class);
-    Route::resource('/user', UserController::class);
-    Route::resource('/akses', AksesController::class);
-    Route::resource('/pemasok', PemasokController::class);
-    Route::resource('/transaksiPenjualan', PenjualanController::class);
-    Route::resource('/transaksiPembelian', PembelianController::class);
-    Route::resource('/pelanggan', PelangganController::class);
-
     //* OWNER
     Route::group(['middleware' => ['cekUserLogin:1']], function () {
     });
     //* ADMIN
     Route::group(['middleware' => ['cekUserLogin:2']], function () {
+        Route::resource('/produk', ProdukController::class);
+        Route::resource('/barang',  BarangController::class);
+        Route::resource('/user', UserController::class);
+        Route::resource('/akses', AksesController::class);
+        Route::resource('/pemasok', PemasokController::class);
+        Route::resource('/transaksiPenjualan', PenjualanController::class);
+        Route::resource('/transaksiPembelian', PembelianController::class);
+        Route::resource('/pelanggan', PelangganController::class);
     });
     //* PETUGAS
     Route::group(['middleware' => ['cekUserLogin:3']], function () {
+        Route::resource('/akses', AksesController::class);
+        Route::resource('/transaksiPenjualan', PenjualanController::class);
     });
 });
