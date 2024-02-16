@@ -46,7 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //* All CAN ACCESS
     Route::get('/profile', [HomeController::class, 'profile']);
-    Route::get('/print', [PembelianController::class, 'print']);
+    Route::get('/print', [PenjualanController::class, 'print']);
 
     //* OWNER
     Route::group(['middleware' => ['cekUserLogin:1']], function () {

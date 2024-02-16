@@ -106,5 +106,14 @@ class PenjualanController extends Controller
 
     public function print()
     {
+        $lastID = Penjualan::select('no_faktur')->orderBy('created_at', 'desc')->first();
+        $print['print'] = DB::table('penjualan')
+            ->join('detail_penjualan', 'penjualan.id', '=', 'detail_penjualan.penjualan_id')
+            ->join('barang', 'detail_penjualan.barang_id', '=', 'barang.id')
+            ->join('pelanggan', 'detail_penjualan.pelanggan_id', '=', 'pelanggan.id')
+            ->join('detail_penjualan', 'penjualan.id', '=', 'detail_penjualan.penjualan_id')
+            ->where('penjualan.no_faktur', '=', $lastID);
+        dd($print);
+        return view('transaksiPenjualan.print')->with($print);
     }
 }
